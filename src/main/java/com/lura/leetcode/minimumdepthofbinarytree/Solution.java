@@ -29,6 +29,7 @@ public class Solution {
         return Math.min(m1, m2) + 1;
     }
 
+    // 广度优先
     public int minDepthV2(TreeNode root) {
         if (root == null) {
             return 0;
