@@ -1,5 +1,6 @@
 package com.lura.leetcode.binarytreeinordertraversal;
 
+import com.lura.leetcode.struct.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,5 +20,9 @@ class SolutionTest {
 
 
 
+    }
+
+    private TreeNode buildTree(Integer[] arr) {
+        return null;
     }
 }
