@@ -11,6 +11,25 @@ package com.lura.leetcode.dynamicprogramming;
  */
 public class DeleteOperationForTwoStrings {
     public int minDistance(String word1, String word2) {
-        return 0;
+        int lcs = lcs(word1, word2);
+        return word1.length() - lcs + word2.length() - lcs;
+    }
+
+    private int lcs(String word1, String word2) {
+        int m = word1.length();
+        int n = word2.length();
+
+        int[][] dp = new int[m + 1][n + 1];
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (word1.charAt(i) == word2.charAt(j)) {
+                    dp[i + 1][j +1] = dp[i][j] + 1;
+                }else {
+                    dp[i + 1][j + 1] = Math.max(dp[i][j + 1], dp[i + 1][j]);
+                }
+            }
+        }
+        return dp[m][n];
     }
 }
