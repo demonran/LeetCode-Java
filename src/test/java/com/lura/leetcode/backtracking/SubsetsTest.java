@@ -20,4 +20,12 @@ class SubsetsTest {
         List<List<Integer>> subsets = solution.subsets(new int[]{1, 2, 3});
         System.out.println(subsets);
     }
+
+    @Test
+    void subsets_2() {
+        List<List<Integer>> subsets = solution.subsets(new int[]{10, 1, 2, 7, 6, 1, 5});
+        System.out.println(subsets);
+    }
+
+
 }
