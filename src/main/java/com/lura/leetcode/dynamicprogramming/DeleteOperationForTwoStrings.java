@@ -15,6 +15,7 @@ public class DeleteOperationForTwoStrings {
         return word1.length() - lcs + word2.length() - lcs;
     }
 
+    // 双指针 + 动态规划
     private int lcs(String word1, String word2) {
         int m = word1.length();
         int n = word2.length();
