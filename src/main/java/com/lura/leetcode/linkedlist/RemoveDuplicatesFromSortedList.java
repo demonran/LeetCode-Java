@@ -9,19 +9,17 @@ import com.lura.leetcode.struct.ListNode;
 public class RemoveDuplicatesFromSortedList {
 
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode dummy = new ListNode(-1, head);
-        while (head != null) {
-            ListNode next = head.next;
-            if (next == null) {
-                break;
-            }
-            if (head.val == next.val) {
-                head.next = next.next;
-            }else {
-                head = head.next;
-            }
-
+        if (head == null) {
+            return null;
         }
-        return dummy.next;
+        ListNode cur = head;
+        while (cur.next != null) {
+            if (cur.val == cur.next.val) {
+                cur.next = cur.next.next;
+            }else {
+                cur = cur.next;
+            }
+        }
+        return head;
     }
 }
