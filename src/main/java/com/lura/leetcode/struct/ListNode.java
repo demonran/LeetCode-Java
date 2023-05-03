@@ -11,6 +11,10 @@ public class ListNode {
         this.val = val;
     }
 
+    public ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
 
     public static ListNode from(int[] arr) {
         if (arr.length == 0) {
