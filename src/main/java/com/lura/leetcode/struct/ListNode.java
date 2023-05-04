@@ -54,21 +54,8 @@ public class ListNode {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ListNode oNode = (ListNode) o;
-        ListNode tNode = this;
 
-        while (tNode != null || oNode != null) {
-            if (tNode == null || oNode == null) {
-                return false;
-            }
-            if (tNode.val != oNode.val) {
-                return false;
-            }
-            tNode = tNode.next;
-            oNode = oNode.next;
-        }
-
-        return true;
+        return ListNodes.equals(this, (ListNode) o);
     }
 
     @Override
