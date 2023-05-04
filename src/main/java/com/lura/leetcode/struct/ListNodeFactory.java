@@ -5,6 +5,35 @@ import java.util.List;
 
 public class ListNodeFactory {
 
+    public static ListNode from(int[] arr) {
+        if (arr.length == 0) {
+            return null;
+        }
+        if (arr.length == 1) {
+            return new ListNode(arr[0]);
+        }
+
+        ListNode head = new ListNode(arr[0]);
+        ListNode next = new ListNode(arr[1]);
+        head.next = next;
+        for (int i = 2; i < arr.length; i++) {
+            ListNode node = new ListNode(arr[i]);
+            next.next = node;
+            next = node;
+        }
+        return head;
+    }
+
+    public static ListNode from(List<Integer> list) {
+        ListNode pre = new ListNode(-1);
+        ListNode cur = pre;
+        for (Integer val : list) {
+            cur.next = new ListNode(val);
+            cur = cur.next;
+        }
+        return pre.next;
+    }
+
 
     public static ListNode[] from(int[][] nodes) {
         ListNode[] lists = new ListNode[nodes.length];

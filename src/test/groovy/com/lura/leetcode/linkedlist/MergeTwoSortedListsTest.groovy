@@ -10,9 +10,9 @@ class MergeTwoSortedListsTest extends Specification {
 
     def "MergeTwoLists"() {
         expect:
-        ListNode.toList(solution.mergeTwoLists(ListNode.from(arr1), ListNode.from(arr2))) == result
+        solution.mergeTwoLists(ListNode.from(arr1), ListNode.from(arr2)) == ListNode.from(result)
         where:
         arr1               | arr2               || result
-        [1, 2, 4] as int[] | [1, 3, 4] as int[] || [1, 1, 2, 3, 4, 4]
+        [1, 2, 4] as int[] | [1, 3, 4] as int[] || [1, 1, 2, 3, 4, 4] as int[]
     }
 }

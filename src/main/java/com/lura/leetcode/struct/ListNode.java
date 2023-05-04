@@ -2,6 +2,7 @@ package com.lura.leetcode.struct;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 public class ListNode {
     public int val;
@@ -14,6 +15,11 @@ public class ListNode {
     public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return val + "";
     }
 
     public static ListNode from(int[] arr) {
@@ -42,5 +48,31 @@ public class ListNode {
             head = head.next;
         }
         return list;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ListNode oNode = (ListNode) o;
+        ListNode tNode = this;
+
+        while (tNode != null || oNode != null) {
+            if (tNode == null || oNode == null) {
+                return false;
+            }
+            if (tNode.val != oNode.val) {
+                return false;
+            }
+            tNode = tNode.next;
+            oNode = oNode.next;
+        }
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(val, next);
     }
 }

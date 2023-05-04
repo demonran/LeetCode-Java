@@ -20,9 +20,8 @@ public class ReverseLinkedList2 {
         }
 
         ListNode cur = pre.next;
-        ListNode next;
         for (int i = left; i < right && cur != null; i++) {
-            next = cur.next;
+            ListNode next = cur.next;
             // 前端节点连接到下一个节点的子节点
             cur.next = next.next;
             // 后面的节点插入到pre之后
