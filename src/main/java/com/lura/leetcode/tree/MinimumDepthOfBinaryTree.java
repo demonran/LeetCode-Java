@@ -1,4 +1,4 @@
-package com.lura.leetcode.minimumdepthofbinarytree;
+package com.lura.leetcode.tree;
 
 import com.lura.leetcode.struct.TreeNode;
 
@@ -6,11 +6,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @ description: Solution
+ * @ description: MinimumDepthOfBinaryTree
  * @ author: Liu Ran
- * @ data: 4/23/23 19:27
+ * @ data: 5/4/23 21:33
  */
-public class Solution {
+public class MinimumDepthOfBinaryTree {
     public int minDepth(TreeNode root) {
         if (root == null) {
             return 0;

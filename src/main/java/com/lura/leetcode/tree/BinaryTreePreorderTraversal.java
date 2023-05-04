@@ -1,4 +1,4 @@
-package com.lura.leetcode.binarytreepreordertraversal;
+package com.lura.leetcode.tree;
 
 import com.lura.leetcode.struct.TreeNode;
 
@@ -6,12 +6,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @ description: Solution
+ * @ description: BinaryTreePreorderTraversal
  * @ author: Liu Ran
- * @ data: 4/23/23 19:14
+ * @ data: 5/4/23 21:31
  */
-public class Solution {
-
+public class BinaryTreePreorderTraversal {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> res = new LinkedList<>();
 
@@ -28,6 +27,5 @@ public class Solution {
         preorder(root.left, res);
         preorder(root.right, res);
     }
-
 
 }

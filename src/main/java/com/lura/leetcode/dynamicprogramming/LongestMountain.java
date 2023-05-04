@@ -1,11 +1,11 @@
-package com.lura.leetcode.longestmountain;
+package com.lura.leetcode.dynamicprogramming;
 
 /**
- * @ description: Solution
+ * @ description: LongestMountain
  * @ author: Liu Ran
- * @ data: 4/23/23 15:08
+ * @ data: 5/4/23 21:36
  */
-public class Solution {
+public class LongestMountain {
 
     public int longestMountain(int[] arr) {
         int ans = 0;
@@ -71,7 +71,4 @@ public class Solution {
         return ans;
 
     }
-
-
-
 }

@@ -1,13 +1,14 @@
-package com.lura.leetcode.maximumdepthofbinarytree;
+package com.lura.leetcode.tree;
 
 import com.lura.leetcode.struct.TreeNode;
 
 /**
- * @ description: Solution
+ * @ description: MaximumDepthOfBinaryTree
  * @ author: Liu Ran
- * @ data: 4/23/23 19:24
+ * @ data: 5/4/23 21:32
  */
-public class Solution {
+public class MaximumDepthOfBinaryTree {
+
     public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;

@@ -1,17 +1,16 @@
-package com.lura.leetcode.binarytreeinordertraversal;
+package com.lura.leetcode.tree;
 
 import com.lura.leetcode.struct.TreeNode;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @ description: Solution
+ * @ description: BinaryTreeInorderTraversal
  * @ author: Liu Ran
- * @ data: 4/23/23 18:55
+ * @ data: 5/4/23 21:30
  */
-public class Solution {
+public class BinaryTreeInorderTraversal {
 
     public List<Integer> inorderTraversal(TreeNode root) {
 

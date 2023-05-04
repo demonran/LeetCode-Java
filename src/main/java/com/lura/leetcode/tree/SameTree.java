@@ -1,13 +1,13 @@
-package com.lura.leetcode.sametree;
+package com.lura.leetcode.tree;
 
 import com.lura.leetcode.struct.TreeNode;
 
 /**
- * @ description: Solution
+ * @ description: SameTree
  * @ author: Liu Ran
- * @ data: 4/24/23 09:59
+ * @ data: 5/4/23 21:33
  */
-public class Solution {
+public class SameTree {
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {

@@ -1,13 +1,15 @@
-package com.lura.leetcode.symmetrictree;
+package com.lura.leetcode.tree;
 
 import com.lura.leetcode.struct.TreeNode;
 
 /**
- * @ description: Solution
+ * 是否是对称树
+ *
+ * @ description: SymmetricTree
  * @ author: Liu Ran
- * @ data: 4/24/23 10:41
+ * @ data: 5/4/23 21:35
  */
-public class Solution {
+public class SymmetricTree {
     public boolean isSymmetric(TreeNode root) {
         if (root == null) {
             return true;
@@ -29,6 +31,5 @@ public class Solution {
 
         return check(p.left, q.right) && check(p.right, q.left);
     }
-
 
 }
