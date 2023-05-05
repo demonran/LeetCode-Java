@@ -1,6 +1,6 @@
 package com.lura.leetcode.linkedlist
 
-import com.lura.leetcode.struct.ListNodeFactory
+import com.lura.leetcode.struct.ListNodes
 import spock.lang.Specification
 
 /**
@@ -13,7 +13,7 @@ class RemoveDuplicatesFromSortedList2Test extends Specification {
 
   def "DeleteDuplicates"() {
     expect:
-    solution.deleteDuplicates(ListNodeFactory.from(head)) == ListNodeFactory.from(result)
+    solution.deleteDuplicates(ListNodes.from(head)) == ListNodes.from(result)
     where:
     head                  || result
     [1, 2, 3, 3, 4, 4, 5] || [1, 2, 5]

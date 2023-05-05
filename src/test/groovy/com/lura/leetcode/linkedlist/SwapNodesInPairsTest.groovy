@@ -1,6 +1,6 @@
 package com.lura.leetcode.linkedlist
 
-import com.lura.leetcode.struct.ListNodeFactory
+import com.lura.leetcode.struct.ListNodes
 import spock.lang.Specification
 
 /**
@@ -14,7 +14,7 @@ class SwapNodesInPairsTest extends Specification {
 
   def "SwapPairs"() {
     expect:
-    solution.swapPairs(ListNodeFactory.from(head)) == ListNodeFactory.from(result)
+    solution.swapPairs(ListNodes.from(head)) == ListNodes.from(result)
     where:
     head         || result
     [1, 2, 3, 4] || [2, 1, 4, 3]

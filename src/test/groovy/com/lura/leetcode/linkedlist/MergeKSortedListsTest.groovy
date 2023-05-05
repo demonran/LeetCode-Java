@@ -1,7 +1,7 @@
 package com.lura.leetcode.linkedlist
 
-import com.lura.leetcode.struct.ListNode
-import com.lura.leetcode.struct.ListNodeFactory
+
+import com.lura.leetcode.struct.ListNodes
 import spock.lang.Specification
 
 class MergeKSortedListsTest extends Specification {
@@ -9,7 +9,7 @@ class MergeKSortedListsTest extends Specification {
 
     def "MergeKLists"() {
         expect:
-        ListNodeFactory.toList(solution.mergeKLists(ListNodeFactory.from(nodes))) == result
+        ListNodes.toList(solution.mergeKLists(ListNodes.from(nodes))) == result
 
         where:
         nodes                                     || result

@@ -1,7 +1,6 @@
 package com.lura.leetcode.linkedlist
 
-import com.lura.leetcode.struct.ListNode
-import com.lura.leetcode.struct.ListNodeFactory
+
 import com.lura.leetcode.struct.ListNodes
 import spock.lang.Specification
 
@@ -16,7 +15,7 @@ class RotateListTest extends Specification {
 
   def "RotateRight"() {
     expect:
-    solution.rotateRight(ListNodeFactory.from(head), k) == ListNodeFactory.from(result)
+    solution.rotateRight(ListNodes.from(head), k) == ListNodes.from(result)
     where:
     head            | k || result
     [1, 2, 3, 4, 5] | 2 || [4, 5, 1, 2, 3]
@@ -25,7 +24,7 @@ class RotateListTest extends Specification {
 
   def "rotateRightV2"() {
     expect:
-    solution.rotateRightV2(ListNodeFactory.from(head), k) == ListNodeFactory.from(result)
+    solution.rotateRightV2(ListNodes.from(head), k) == ListNodes.from(result)
     where:
     head            | k || result
     [1, 2, 3, 4, 5] | 2 || [4, 5, 1, 2, 3]
