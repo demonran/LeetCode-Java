@@ -21,10 +21,18 @@ public class RemoveLinkedListElements {
         while (cur.next != null) {
             if (cur.next.val == val) {
                 cur.next = cur.next.next;
-            }else {
+            } else {
                 cur = cur.next;
             }
         }
         return pre.next;
+    }
+
+    public ListNode removeElementsV2(ListNode head, int val) {
+        if (head == null) {
+            return null;
+        }
+        head.next = removeElementsV2(head.next, val);
+        return head.val == val ? head.next : head;
     }
 }
