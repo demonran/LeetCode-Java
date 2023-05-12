@@ -18,11 +18,7 @@ import java.util.Arrays;
 public class DesignHashmap {
 }
 
-class Node {
-    int key;
-    int val;
-    Node next;
-}
+
 
 class MyHashMap {
 
@@ -44,3 +40,69 @@ class MyHashMap {
         nodes[key] = -1;
     }
 }
+
+
+class Node {
+    int key;
+    int val;
+    Node next;
+
+    public Node(int key, int val) {
+        this.key = key;
+        this.val = val;
+    }
+}
+class MyHashMapV2 {
+
+    Node[] nodes;
+    public MyHashMapV2() {
+        nodes = new Node[1009];
+    }
+
+    public void put(int key, int value) {
+        int index = key % nodes.length;
+        Node loc = nodes[index];
+        while (loc != null) {
+            if (loc.key == key) {
+                loc.val = value;
+                return;
+            }
+            loc = loc.next;
+        }
+        Node node = new Node(key, value);
+        node.next = nodes[index];
+        nodes[index] = node;
+    }
+
+    public int get(int key) {
+        int index = key % nodes.length;
+        Node loc = nodes[index];
+        while (loc != null) {
+            if (loc.key == key) {
+                return loc.val;
+            }
+            loc = loc.next;
+        }
+        return -1;
+    }
+
+    public void remove(int key) {
+        int index = key % nodes.length;
+        Node loc = nodes[index];
+        Node pre = null;
+        while (loc != null) {
+            if (loc.key == key) {
+                if (pre == null) {
+                    nodes[index] = loc.next;
+                }else {
+                    pre.next = loc.next;
+                }
+            }
+            pre = loc;
+            loc = loc.next;
+        }
+    }
+
+}
+
+

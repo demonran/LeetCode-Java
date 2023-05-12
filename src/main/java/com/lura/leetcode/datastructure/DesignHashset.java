@@ -1,4 +1,4 @@
-package com.lura.leetcode.datastructures;
+package com.lura.leetcode.datastructure;
 
 import com.lura.leetcode.struct.ListNode;
 
