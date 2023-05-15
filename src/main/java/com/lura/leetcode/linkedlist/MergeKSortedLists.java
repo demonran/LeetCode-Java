@@ -42,6 +42,11 @@ public class MergeKSortedLists {
 
     }
 
+    /**
+     * 当作K-1个 合并两个链表处理。
+     * @param lists
+     * @return
+     */
     public ListNode mergeKListsV2(ListNode[] lists) {
         if (lists.length == 0) {
             return null;
