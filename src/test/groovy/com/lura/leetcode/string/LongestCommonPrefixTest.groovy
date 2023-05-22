@@ -18,4 +18,14 @@ class LongestCommonPrefixTest extends Specification {
     ["flower", "flow", "flight"] as String[] || "fl"
     ["dog", "racecar", "car"] as String[]    || ""
   }
+
+
+  def "LongestCommonPrefixV2"() {
+    expect:
+    solution.longestCommonPrefixV2(strs) == res
+    where:
+    strs                                     || res
+    ["flower", "flow", "flight"] as String[] || "fl"
+    ["dog", "racecar", "car"] as String[]    || ""
+  }
 }

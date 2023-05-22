@@ -11,6 +11,9 @@ package com.lura.leetcode.string;
  */
 public class LongestCommonPrefix {
 
+    /**
+     * 纵向遍历
+     */
     public String longestCommonPrefix(String[] strs) {
         for (int i = 0; i < strs[0].length(); i++) {
             for (int j = 0; j < strs.length - 1; j++) {
@@ -20,5 +23,28 @@ public class LongestCommonPrefix {
             }
         }
         return strs[0];
+    }
+
+
+    /**
+     * 横向遍历
+     */
+    public String longestCommonPrefixV2(String[] strs) {
+        String lcp = strs[0];
+        for (int i = 1; i < strs.length; i++) {
+            lcp = longestCommonPrefix(lcp, strs[i]);
+        }
+        return lcp;
+    }
+
+    private String longestCommonPrefix(String str1, String str2) {
+        int min = Math.min(str1.length(), str2.length());
+
+        for (int i = 0; i < min; i++) {
+            if (str1.charAt(i) != str2.charAt(i)) {
+                return str1.substring(0, i);
+            }
+        }
+        return str1;
     }
 }
