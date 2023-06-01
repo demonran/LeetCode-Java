@@ -35,6 +35,6 @@ public class ReverseVowelsOfAString {
     }
 
     private boolean isVowel(char c) {
-        return "aoeiuAOEIU".indexOf(c) > 0;
+        return "aoeiuAOEIU".indexOf(c) >= 0;
     }
 }

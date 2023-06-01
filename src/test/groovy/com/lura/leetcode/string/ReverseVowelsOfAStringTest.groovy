@@ -17,5 +17,6 @@ class ReverseVowelsOfAStringTest extends Specification {
     s          || res
     "hello"    || "holle"
     "leetcode" || "leotcede"
+    "ai"       || "ia"
   }
 }
