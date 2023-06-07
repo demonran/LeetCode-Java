@@ -11,6 +11,11 @@ package com.lura.leetcode.dynamicprogramming;
  */
 public class LongestPalindromicSubstring {
 
+    /**
+     * 回文有两种， 以i为中心， 以i和i+1为中心都算回文
+     * @param s
+     * @return
+     */
     public String longestPalindrome(String s) {
         String res = "";
         for (int i = 0; i < s.length(); i++) {
