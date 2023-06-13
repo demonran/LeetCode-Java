@@ -7,6 +7,12 @@ package com.lura.leetcode.dynamicprogramming;
  */
 public class LongestMountain {
 
+    /**
+     *  找山顶
+     *  i为某个点， left[i]为左边递增的数量， right[i]为右边递减的数量
+     *  left[i]和right[i]都大于0，则为山顶。
+     *  left[i] + right[i]为山脉长度。
+     */
     public int longestMountain(int[] arr) {
         int ans = 0;
 
@@ -39,6 +45,10 @@ public class LongestMountain {
         return ans;
     }
 
+    /**
+     * 找山脚
+     * 双指针， 找两边的山脚。
+     */
     public int longestMountainV2(int[] arr) {
         int n = arr.length;
         if (n == 0) {
