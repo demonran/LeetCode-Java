@@ -29,4 +29,14 @@ class ZigzagConversionTest extends Specification {
     "PAYPALISHIRING" | 4       || "PINALSIGYAHRPI"
     "ABCDE"          | 4       || "ABCED"
   }
+
+  def "ConvertV3"() {
+    expect:
+    solution.convertV3(s, numRows) == res
+    where:
+    s                | numRows || res
+    "PAYPALISHIRING" | 3       || "PAHNAPLSIIGYIR"
+    "PAYPALISHIRING" | 4       || "PINALSIGYAHRPI"
+    "ABCDE"          | 4       || "ABCED"
+  }
 }

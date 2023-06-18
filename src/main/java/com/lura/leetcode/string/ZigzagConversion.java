@@ -1,6 +1,7 @@
 package com.lura.leetcode.string;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -83,5 +84,30 @@ public class ZigzagConversion {
         return ans.toString();
     }
 
+    /**
+     * 顺序写入字符
+     * 一个周期为 2 * numRows - 2,
+     * 第一行和最后一行添加一个字符， 中间的分别添加两个 i 和 t - i
+     */
+    public String convertV3(String s, int numRows) {
 
+        int n = s.length();
+        if (numRows < 2) {
+            return s;
+        }
+        StringBuilder ans = new StringBuilder();
+        int t = 2 * numRows - 2;
+        // 枚举结果的行
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j + i < n; j += t) {
+                ans.append(s.charAt(j + i)); // 每个周期的第一列。
+                // 每个周期的第二列（第一行和最后一行只有一列）
+                if (i > 0 && i < numRows - 1 && j + (t - i) < n) {
+                    ans.append(s.charAt(j + (t - i)));
+                }
+            }
+        }
+        return ans.toString();
+
+    }
 }
