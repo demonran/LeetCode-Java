@@ -9,6 +9,7 @@
  * slidingwindow 滑动窗口
  * string 字符串
  * tree 树
+ * binarysearch 二分查找
  *
  * datastructure 定义的数据结构
  * struct 辅助结构体
