@@ -1,4 +1,4 @@
-package com.lura.leetcode.backtracking;
+package com.lura.leetcode.problemset.backtracking;
 
 import com.lura.leetcode.problemset.backtracking.CombinationSum2;
 import org.junit.jupiter.api.Test;

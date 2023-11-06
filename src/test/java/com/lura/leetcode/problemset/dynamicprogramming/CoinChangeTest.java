@@ -1,4 +1,4 @@
-package com.lura.leetcode.dynamicprogramming;
+package com.lura.leetcode.problemset.dynamicprogramming;
 
 import com.lura.leetcode.problemset.dynamicprogramming.CoinChange;
 import org.junit.jupiter.api.Test;
