@@ -1,6 +1,6 @@
 package com.lura.leetcode.problemset.linkedlist;
 
-import com.lura.leetcode.problemset.struct.ListNode;
+import com.lura.leetcode.struct.ListNode;
 
 /**
  * 83. 删除排序链表中的重复元素

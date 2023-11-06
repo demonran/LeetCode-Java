@@ -1,7 +1,7 @@
 package com.lura.leetcode.problemset.linkedlist;
 
-import com.lura.leetcode.problemset.struct.ListNode;
-import com.lura.leetcode.problemset.struct.TreeNode;
+import com.lura.leetcode.struct.ListNode;
+import com.lura.leetcode.struct.TreeNode;
 
 /**
  * 109. 有序链表转换二叉搜索树

@@ -1,6 +1,6 @@
 package com.lura.leetcode.problemset.linkedlist;
 
-import com.lura.leetcode.problemset.struct.ListNode;
+import com.lura.leetcode.struct.ListNode;
 
 /**
  * 160. 相交链表

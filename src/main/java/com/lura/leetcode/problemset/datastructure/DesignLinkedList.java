@@ -1,7 +1,7 @@
 package com.lura.leetcode.problemset.datastructure;
 
-import com.lura.leetcode.problemset.struct.DoubleListNode;
-import com.lura.leetcode.problemset.struct.ListNode;
+import com.lura.leetcode.struct.DoubleListNode;
+import com.lura.leetcode.struct.ListNode;
 
 /**
  * 707. 设计链表

@@ -1,7 +1,7 @@
 package com.lura.leetcode.problemset.linkedlist
 
-import com.lura.leetcode.problemset.linkedlist.ReverseLinkedList2
-import com.lura.leetcode.problemset.struct.ListNode
+
+import com.lura.leetcode.struct.ListNode
 import spock.lang.Specification
 
 class ReverseLinkedList2Test extends Specification {

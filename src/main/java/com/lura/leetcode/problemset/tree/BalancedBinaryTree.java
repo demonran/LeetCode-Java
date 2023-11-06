@@ -1,6 +1,6 @@
 package com.lura.leetcode.problemset.tree;
 
-import com.lura.leetcode.problemset.struct.TreeNode;
+import com.lura.leetcode.struct.TreeNode;
 
 /**
  * @ description: BalancedBinaryTree

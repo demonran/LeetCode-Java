@@ -1,4 +1,4 @@
-package com.lura.leetcode.problemset.struct;
+package com.lura.leetcode.struct;
 
 import java.util.LinkedList;
 import java.util.List;

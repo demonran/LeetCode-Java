@@ -1,6 +1,6 @@
 package com.lura.leetcode.problemset.datastructure;
 
-import com.lura.leetcode.problemset.struct.ListNode;
+import com.lura.leetcode.struct.ListNode;
 
 /**
  * 705. 设计哈希集合

@@ -1,6 +1,6 @@
 package com.lura.leetcode.problemset.linkedlist;
 
-import com.lura.leetcode.problemset.struct.Node;
+import com.lura.leetcode.struct.Node;
 
 import java.util.HashMap;
 import java.util.Map;
