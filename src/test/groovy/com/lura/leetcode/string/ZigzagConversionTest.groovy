@@ -1,5 +1,6 @@
 package com.lura.leetcode.string
 
+import com.lura.leetcode.problemset.string.ZigzagConversion
 import spock.lang.Specification
 
 /**

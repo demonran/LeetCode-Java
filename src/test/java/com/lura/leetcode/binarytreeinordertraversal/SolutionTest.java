@@ -1,9 +1,7 @@
 package com.lura.leetcode.binarytreeinordertraversal;
 
-import com.lura.leetcode.struct.TreeNode;
+import com.lura.leetcode.problemset.struct.TreeNode;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @ description: SolutionTest

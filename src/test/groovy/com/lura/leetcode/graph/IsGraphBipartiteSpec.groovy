@@ -1,5 +1,6 @@
 package com.lura.leetcode.graph
 
+import com.lura.leetcode.problemset.graph.IsGraphBipartite
 import spock.lang.Specification
 
 /**

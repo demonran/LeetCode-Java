@@ -1,5 +1,6 @@
 package com.lura.leetcode.slidingwindow
 
+import com.lura.leetcode.problemset.slidingwindow.MinimumWindowSubstring
 import spock.lang.Specification
 
 /**

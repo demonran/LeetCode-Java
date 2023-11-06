@@ -1,8 +1,8 @@
 package com.lura.leetcode.linkedlist
 
-
-import com.lura.leetcode.struct.ListNodes
-import com.lura.leetcode.struct.TreeNodes
+import com.lura.leetcode.problemset.linkedlist.ConvertSortedListToBinarySearchTree
+import com.lura.leetcode.problemset.struct.ListNodes
+import com.lura.leetcode.problemset.struct.TreeNodes
 import spock.lang.Specification
 
 /**

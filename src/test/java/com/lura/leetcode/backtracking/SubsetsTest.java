@@ -1,10 +1,9 @@
 package com.lura.leetcode.backtracking;
 
+import com.lura.leetcode.problemset.backtracking.Subsets;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @ description: SubsetsTest

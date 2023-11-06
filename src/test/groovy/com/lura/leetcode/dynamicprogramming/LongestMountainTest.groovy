@@ -1,8 +1,7 @@
 package com.lura.leetcode.dynamicprogramming
 
+import com.lura.leetcode.problemset.dynamicprogramming.LongestMountain
 import spock.lang.Specification
-
-import static org.junit.jupiter.api.Assertions.assertEquals
 
 /**
  * @ description: LongestMountainTest

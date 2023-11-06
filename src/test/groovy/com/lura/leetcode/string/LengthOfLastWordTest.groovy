@@ -1,7 +1,7 @@
 package com.lura.leetcode.string
 
+import com.lura.leetcode.problemset.string.LengthOfLastWord
 import spock.lang.Specification
-import sun.security.util.Length
 
 /**
  * @ description: LengthOfLastWordTest

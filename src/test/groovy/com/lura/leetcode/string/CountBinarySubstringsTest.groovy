@@ -1,5 +1,6 @@
 package com.lura.leetcode.string
 
+import com.lura.leetcode.problemset.string.CountBinarySubstrings
 import spock.lang.Specification
 
 /**

@@ -1,5 +1,6 @@
 package com.lura.leetcode.backtracking
 
+import com.lura.leetcode.problemset.backtracking.GenerateParentheses
 import spock.lang.Specification
 
 /**

@@ -1,5 +1,6 @@
 package com.lura.leetcode.dynamicprogramming;
 
+import com.lura.leetcode.problemset.dynamicprogramming.CoinChange;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

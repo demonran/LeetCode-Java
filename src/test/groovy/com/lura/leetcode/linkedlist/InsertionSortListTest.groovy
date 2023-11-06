@@ -1,7 +1,7 @@
 package com.lura.leetcode.linkedlist
 
-import com.lura.leetcode.struct.ListNode
-import com.lura.leetcode.struct.ListNodes
+import com.lura.leetcode.problemset.linkedlist.InsertionSortList
+import com.lura.leetcode.problemset.struct.ListNodes
 import spock.lang.Specification
 
 /**
