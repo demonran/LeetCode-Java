@@ -32,4 +32,20 @@ class SortAnArrayTest extends Specification {
     nums         || res
     [5, 2, 3, 1] as int[]|| [1, 2, 3, 5] as int[]
   }
+
+  def "selectSort"() {
+    expect:
+    solution.selectSort(nums) == res
+    where:
+    nums         || res
+    [5, 2, 3, 1] as int[]|| [1, 2, 3, 5] as int[]
+  }
+
+  def "selectSortV2"() {
+    expect:
+    solution.selectSortV2(nums) == res
+    where:
+    nums         || res
+    [5, 2, 3, 1] as int[]|| [1, 2, 3, 5] as int[]
+  }
 }

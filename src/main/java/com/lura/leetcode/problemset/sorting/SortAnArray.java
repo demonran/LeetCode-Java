@@ -52,6 +52,45 @@ public class SortAnArray {
         nums[j] = tmp;
     }
 
+
+    /**
+     * 选择排序
+     * @param nums
+     * @return
+     */
+    public int[] selectSort(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] < nums[i]) {
+                    swap(nums, j, i);
+                }
+            }
+        }
+        return nums;
+    }
+
+    /**
+     * 选择排序V2
+     * 记录最小值位置， 只交换一次
+     * @param nums
+     * @return
+     */
+    public int[] selectSortV2(int[] nums) {
+        int min;
+        for (int i = 0; i < nums.length - 1; i++) {
+            min = i;
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] < nums[min]) {
+                    min = j;
+                }
+            }
+            if (min != i) {
+                swap(nums, i , min);
+            }
+        }
+        return nums;
+    }
+
     /**
      * 冒泡排序
      *
@@ -110,4 +149,6 @@ public class SortAnArray {
             }
         }
     }
+
+
 }
