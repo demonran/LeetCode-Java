@@ -18,6 +18,7 @@ public class LongestPalindromicSubstring {
      */
     public String longestPalindrome(String s) {
         String res = "";
+        // 把每个点当作中心往两边找相同的字符
         for (int i = 0; i < s.length(); i++) {
             // s[i]为中心
             String s1 = palindrome(s, i, i);

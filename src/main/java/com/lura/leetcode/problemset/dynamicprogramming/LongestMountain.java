@@ -38,7 +38,7 @@ public class LongestMountain {
 
         for (int i = 1; i < n; i++) {
             if (left[i] > 0 && right[i] > 0) {
-                return left[i] + right[i] + 1;
+                ans = Math.max(ans, left[i] + right[i] + 1);
             }
         }
 
