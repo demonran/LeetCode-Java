@@ -13,6 +13,7 @@ import com.lura.leetcode.struct.TreeNode;
 public class Lc04IsSubStructure {
 
     public boolean isSubStructure(TreeNode A, TreeNode B) {
+        // 分别计算 顶点 || 左节点 || 右节点 是不是t2的顶点
         return (A != null && B != null) && (recur(A, B) || isSubStructure(A.left, B) || isSubStructure(A.right, B));
     }
 
