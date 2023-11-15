@@ -19,4 +19,15 @@ class MoveZerosTest extends Specification {
     [0, 0, 1] as int[]        || [1, 0, 0] as int[]
 
   }
+
+  def "MoveZeroesV2"() {
+    expect:
+    solution.moveZeroesV2(nums)
+    nums == res
+    where:
+    nums                      || res
+    [0, 1, 0, 3, 12] as int[] || [1, 3, 12, 0, 0] as int[]
+    [0, 0, 1] as int[]        || [1, 0, 0] as int[]
+
+  }
 }
