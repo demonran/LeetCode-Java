@@ -19,7 +19,7 @@ import java.util.Map;
 public class TwoSum {
 
     /**
-     * 穷举法, 时间复杂度O(n2)
+     * 穷举法, 时间复杂度O(n^2)
      * @param nums
      * @param target
      * @return
@@ -69,7 +69,7 @@ public class TwoSum {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             Integer j = map.get(target - nums[i]);
-            // 避免出现同一个数相加等于target的情况
+            // 存在这样的j则返回
             if (j != null) {
                 return new int[]{i, j};
             }
