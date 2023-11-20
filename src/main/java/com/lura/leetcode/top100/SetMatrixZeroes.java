@@ -1,124 +1,12 @@
-## LeetCode 热题Top100
+package com.lura.leetcode.top100;
 
-### 238. 除自身以外数组的乘积
-给你一个整数数组 nums，返回 数组 answer ，其中 answer[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积 。
-题目数据 保证 数组 nums之中任意元素的全部前缀元素和后缀的乘积都在  32 位 整数范围内。
-请 不要使用除法，且在 O(n) 时间复杂度内完成此题。
-
-示例 1:
->输入: nums = [1,2,3,4]
->输出: [24,12,8,6]
-
-示例 2:
->输入: nums = [-1,1,0,-3,3]
->输出: [0,0,9,0,0]
-
-```java
-public class Solution {
-    public int[] productExceptSelf(int[] nums) {
-        int[] res = new int[nums.length];
-        res[0] = 1;
-        // 先计算i左侧所有数的乘积
-        for (int i = 1; i < nums.length; i++) {
-            res[i] = res[i - 1] * nums[i - 1];
-        }
-        // 存储右边元素的乘积
-        int tmp = 1;
-        // 计算右上角
-        for (int i = nums.length - 2; i >= 0; i--) {
-            // 计算右边元素的乘积
-            tmp *= nums[i + 1];
-            // 左右相乘
-            res[i] *= tmp;
-        }
-        return res;
-    }
-}
-
-```
-
-### 41. 缺失的第一个正数
-给你一个未排序的整数数组 nums ，请你找出其中没有出现的最小的正整数。
-请你实现时间复杂度为 O(n) 并且只使用常数级别额外空间的解决方案。
-
-
-示例 1：
-输入：nums = [1,2,0]
-输出：3
-
- 
-示例 2：
-输入：nums = [3,4,-1,1]
-输出：2
-
-示例 3：
-输入：nums = [7,8,9,11,12]
-输出：1
-```java
-
-public class Solution {
-    /**
-     * 哈希表解法， 先放入hash表中，然后从1开始找。
-     */
-    public int firstMissingPositive(int[] nums) {
-        Set<Integer> set = new HashSet<>();
-        for (int num : nums) {
-            set.add(num);
-        }
-        int i = 1;
-        while (true) {
-            if (!set.contains(i)) {
-                return i;
-            }
-            i++;
-        }
-    }
-    /**
-     * 数组长度为N， 结果一定是[1,N+1]之间
-     * 我们把[1,N+1]之外的数设置为N+1
-     * 然后把[1, N]下标对应的数据改为负数
-     * 那么第一个正数的下标+1就是结果， 因为[1, N]对应的下标都设置成-1负数了，  没有设置的就是不存在的结果。
-     */
-    public int firstMissingPositiveV2(int[] nums) {
-
-        int n = nums.length;
-        for (int i = 0; i < n; i++) {
-            if (nums[i] > n || nums[i] < 1) {
-                nums[i] = n + 1;
-            }
-        }
-        for (int i = 0; i < n; i++) {
-            // 取绝对值，因为有可能被改成了负数
-            int num = Math.abs(nums[i]);
-            if (num <= n) {
-                // 用绝对值，避免两次修改同一个位置数据，如[1,1]
-                nums[num - 1] = -Math.abs(nums[num - 1]);
-            }
-        }
-        for (int i = 0; i < n; i++) {
-            if (nums[i] > 0) {
-                return i+1;
-            }
-        }
-        // 如果没有找到则直接返回n+1
-        return n + 1;
-    }
-}
-```
-
-### 73. 矩阵置零
-给定一个 m x n 的矩阵，如果一个元素为 0 ，则将其所在行和列的所有元素都设为 0 。请使用 原地 算法。
-
-示例 1：
-![](image/set-matrix-zeroes-1.png)
-输入：matrix = [[1,1,1],[1,0,1],[1,1,1]]
-输出：[[1,0,1],[0,0,0],[1,0,1]]
-
-示例 2：
-![](image/set-matrix-zeroes-2.png)
-输入：matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
-输出：[[0,0,0,0],[0,4,5,0],[0,3,1,0]]
-```java
+/**
+ * SetMatrixZeroes
+ * ### 73. 矩阵置零
+ * 给定一个 m x n 的矩阵，如果一个元素为 0 ，则将其所在行和列的所有元素都设为 0 。请使用 原地 算法。
+ *
+ * @author Liu Ran
+ */
 public class SetMatrixZeroes {
 
     /**
@@ -157,7 +45,7 @@ public class SetMatrixZeroes {
      * [1,1,1]]
      * <p>
      * 用matrix[1,0] 和matrix[0,1]标记，
-     * 记录第一行和第一列是否有0
+     *
      * @param matrix
      */
     public void setZeroesV2(int[][] matrix) {
@@ -214,7 +102,7 @@ public class SetMatrixZeroes {
      * [1,1,1]]
      * <p>
      * 用matrix[1,0] 和matrix[0,1]标记，
-     * 只记录第一列是否有0
+     *
      * @param matrix
      */
     public void setZeroesV3(int[][] matrix) {
@@ -247,4 +135,3 @@ public class SetMatrixZeroes {
         }
     }
 }
-```
