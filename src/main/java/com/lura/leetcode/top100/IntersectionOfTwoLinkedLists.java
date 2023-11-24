@@ -26,6 +26,6 @@ public class IntersectionOfTwoLinkedLists {
             pA = pA == null ? headB : pA.next;
             pB = pB == null ? headA : pB.next;
         }
-        return headA;
+        return pA;
     }
 }
