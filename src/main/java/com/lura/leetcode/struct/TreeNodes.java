@@ -1,5 +1,6 @@
 package com.lura.leetcode.struct;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -34,6 +35,45 @@ public class TreeNodes {
         }
 
         return res;
+    }
+
+    // [3,1,4,null,2]
+    public static TreeNode fromList(List<Integer> list) {
+        if (list.isEmpty()) {
+            return null;
+        }
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        TreeNode root = new TreeNode(list.get(0));
+        queue.offer(root);
+        int index = 1;
+        while (index < list.size()) {
+            TreeNode curr = queue.poll();
+            Integer val = list.get(index++);
+            TreeNode left = null;
+            if (val != null) {
+                left = new TreeNode(val);
+            }
+            if (curr != null) {
+                curr.left = left;
+            }
+
+            queue.offer(left);
+            if (index == list.size()) {
+                break;
+            }
+            val = list.get(index++);
+            TreeNode right = null;
+            if (val != null) {
+                right = new TreeNode(val);
+            }
+            if (curr != null) {
+                curr.right = right;
+            }
+            queue.offer(right);
+
+        }
+
+        return root;
     }
 
 }
