@@ -21,13 +21,12 @@ public class ConvertSortedArrayToBinarySearchTree {
     }
 
     private TreeNode sort(int[] nums, int left, int right) {
-
+        if (left > right) {
+            return null;
+        }
         int mid = (left + right) / 2;
         TreeNode treeNode = new TreeNode(nums[mid]);
 
-        if (left > right) {
-            return treeNode;
-        }
         treeNode.left = sort(nums, left, mid - 1);
         treeNode.right = sort(nums, mid + 1, right);
 
