@@ -52,12 +52,13 @@ public class TreeNodes {
             TreeNode left = null;
             if (val != null) {
                 left = new TreeNode(val);
+                queue.offer(left);
             }
             if (curr != null) {
                 curr.left = left;
             }
 
-            queue.offer(left);
+
             if (index == list.size()) {
                 break;
             }
@@ -65,11 +66,12 @@ public class TreeNodes {
             TreeNode right = null;
             if (val != null) {
                 right = new TreeNode(val);
+                queue.offer(right);
             }
             if (curr != null) {
                 curr.right = right;
             }
-            queue.offer(right);
+
 
         }
 
