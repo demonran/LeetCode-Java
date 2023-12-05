@@ -15,8 +15,8 @@ public class SearchInRotatedSortedArray {
             if (nums[mid] == target) {
                 return mid;
             }
-            if (nums[0] <= nums[mid]) { // 左边是有序的
-                if (nums[0] <= target && target < nums[mid]) {
+            if (nums[left] <= nums[mid]) { // 左边是有序的
+                if (nums[left] <= target && target < nums[mid]) {
                     right = mid - 1;
                 } else {
                     left = mid + 1;
